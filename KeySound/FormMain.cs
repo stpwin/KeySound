@@ -42,6 +42,7 @@ namespace KeySound
             contextMenuStrip1.Font = contextMenuFont;
             this.Text = BuildFormTitle();
             notifyIcon1.Text = this.Text;
+            
             isInitial = false;
         }
 
@@ -170,7 +171,7 @@ namespace KeySound
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             timer2.Stop();
         }
 

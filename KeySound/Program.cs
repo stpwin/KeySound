@@ -16,7 +16,8 @@ namespace KeySound
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            SingleInstance.SingleApplication.Run(new FormMain());
+            //Application.Run(new FormMain());
         }
     }
 }
