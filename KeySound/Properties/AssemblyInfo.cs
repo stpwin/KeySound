@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("KeySound")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("เล่นเสียงที่กำหนดโดยกดคีย์ลัด")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("F/stop Dev.")]
 [assembly: AssemblyProduct("KeySound")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © F/stop Dev.  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
