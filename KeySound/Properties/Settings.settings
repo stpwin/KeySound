@@ -6,7 +6,10 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="shortcutKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Insert</Value>
+    </Setting>
+    <Setting Name="waveName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ผู้หญิง</Value>
     </Setting>
   </Settings>
 </SettingsFile>

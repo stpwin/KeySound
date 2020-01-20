@@ -37,13 +37,25 @@ namespace KeySound.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Insert")]
         public string shortcutKey {
             get {
                 return ((string)(this["shortcutKey"]));
             }
             set {
                 this["shortcutKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ผู้หญิง")]
+        public string waveName {
+            get {
+                return ((string)(this["waveName"]));
+            }
+            set {
+                this["waveName"] = value;
             }
         }
     }

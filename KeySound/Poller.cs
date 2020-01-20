@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace KeySound
 {
-    class Poller
+    public class Poller
     {
         [DllImport("user32.dll")]
         static extern short GetAsyncKeyState(System.Windows.Forms.Keys vKey);
