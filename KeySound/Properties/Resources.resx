@@ -124,12 +124,15 @@
   <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ผู้ชาย" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="ผู้ชาย" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CheckTelMale.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ผู้ชาย-" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
         b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAAAAAAIgNBACIDQQAAAEAAQoPAgAAAIgNBAACUklGRoANBABXQVZFZm10IBIAAAAD
+        AQEBCQIAAAAAAAAAiA0EAIgNBACIDQQAAAEAAQoPAgAAAIgNBAACUklGRoANBABXQVZFZm10IBIAAAAD
         AAEAIlYAAIhYAQAEACAAAABkYXRh3PADAEQdxSj71sIqiR4nrM4Frqsg1Aur4WakrKB7h6xq4CMrMAe2
         rJ/BSiuj89cs/a8krOBUGywOhVYs0tw7q9IryikYugutFipVLNQyh6zbaamt7ua1LcILdC0y1X+q/AWs
         LoqOTi7lXyqsdSZ7LuRNsS0SXYMrLbGrLvlLwq2MaNyudsrcrZmO+a1ChaUshNMLL3jf0S5tMgQt73+9
@@ -4560,12 +4563,15 @@
 </value>
     <comment>ผู้ชาย</comment>
   </data>
-  <data name="ผู้หญิง" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="ผู้หญิง" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CheckTelFemale.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ผู้หญิง-" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
         b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAAAAAAAosBAAKLAQAAAEAAQoPAgAAAAosBAACUklGRgIsBABXQVZFZm10IBIAAAAD
+        AQEBCQIAAAAAAAAACiwEAAosBAAKLAQAAAEAAQoPAgAAAAosBAACUklGRgIsBABXQVZFZm10IBIAAAAD
         AAEAIlYAAIhYAQAEACAAAABkYXRhYA8EAAGvsS6vkbcui0TALsjIxS6dzcou5GHRLkgy1y4rq94ut1vq
         Lv7r+S6TcQYvI8MUL6YWJy96p0Iv/sxgL4JkhS+nRpcvlhi4L4J/2S9+C/8vn1YXMBB+MTBpY0swC0dt
         MNx4iDCN1pow0aKsML2twTAj1tUw89npMO5w/DBYKAgxviERMc64FzHUVx8xdWQkMbHYJzHFvSoxQrMq

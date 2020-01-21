@@ -92,9 +92,27 @@ namespace KeySound.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream ผู้ชาย_ {
+            get {
+                return ResourceManager.GetStream("ผู้ชาย-", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream ผู้หญิง {
             get {
                 return ResourceManager.GetStream("ผู้หญิง", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream ผู้หญิง_ {
+            get {
+                return ResourceManager.GetStream("ผู้หญิง-", resourceCulture);
             }
         }
     }

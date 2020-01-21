@@ -144,6 +144,11 @@
   <ItemGroup>
     <None Include="Resources\sounds\CheckTelMale.wav" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\CheckTelFemale.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckTelMale.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
