@@ -19,10 +19,8 @@ namespace KeySound
 {
     public partial class FormMain : Form
     {
-        
         private bool isInitial = true;
-       
-
+        
         public FormMain()
         {
             InitializeComponent();
@@ -31,21 +29,29 @@ namespace KeySound
             {
                 LoadWaveFile(Properties.Settings.Default.wavePath);
             };
-            comboBoxKeys.Items.AddRange( Enum.GetValues(typeof(Keys)).Cast<Keys>().Select(p => p.ToString()).ToArray() );
+            var keyStrings = Enum.GetValues(typeof(Keys)).Cast<Keys>().Select(p => p.ToString()).ToArray();
+            comboBoxKeys.Items.AddRange(keyStrings);
+            comboBoxKeys2.Items.AddRange(keyStrings);
+
+            comboBoxKeys.SelectedIndex = 0;
+            comboBoxKeys2.SelectedIndex = 0;
             if (Properties.Settings.Default.shortcutKey != "")
             {
                 comboBoxKeys.SelectedItem = Properties.Settings.Default.shortcutKey;
             };
 
+            if (Properties.Settings.Default.shortcutKey2 != "")
+            {
+                comboBoxKeys2.SelectedItem = Properties.Settings.Default.shortcutKey2;
+            };
+
             this.Text = Program.BuildFormTitle();
 
+            comboBoxSound.Text = Properties.Settings.Default.waveName;
+            comboBoxSound2.Text = Properties.Settings.Default.waveName2;
+
             isInitial = false;
-
-            comboBox1.Text = Properties.Settings.Default.waveName;
-
         }
-
-
 
         public  void LoadWaveFile(string file)
         {
@@ -56,12 +62,7 @@ namespace KeySound
             }
             textBoxFilePath.ForeColor = Color.Black;
             textBoxFilePath.Text = file;
-
-            //Program._soundPlayer.SoundLocation = Properties.Settings.Default.wavePath;
         }
-
-        
-
 
         private void buttonBrowse_Click(object sender, EventArgs e)
         {
@@ -76,6 +77,7 @@ namespace KeySound
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
+            Program._soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(comboBoxSound.Text);
             Program._soundPlayer.Play();
         }
 
@@ -93,13 +95,35 @@ namespace KeySound
                 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxSound_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             if (isInitial) return;
-            Properties.Settings.Default.waveName = comboBox1.Text;
+            Properties.Settings.Default.waveName = comboBoxSound.Text;
             Properties.Settings.Default.Save();
-            Program._soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(comboBox1.Text);
+            Program._soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(comboBoxSound.Text);
+        }
+
+        private void comboBoxKeys2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (isInitial) return;
+            Properties.Settings.Default.shortcutKey2 = comboBoxKeys2.SelectedItem.ToString();
+            Properties.Settings.Default.Save();
+            Enum.TryParse(Properties.Settings.Default.shortcutKey2, out Program.hotKey2);
+        }
+
+        private void comboBoxSound2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (isInitial) return;
+            Properties.Settings.Default.waveName2 = comboBoxSound2.Text;
+            Properties.Settings.Default.Save();
+            
+        }
+
+        private void buttonTest2_Click(object sender, EventArgs e)
+        {
+            Program._soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(comboBoxSound2.Text);
+            Program._soundPlayer.Play();
         }
     }
 }

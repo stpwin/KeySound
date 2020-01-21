@@ -11,5 +11,11 @@
     <Setting Name="waveName" Type="System.String" Scope="User">
       <Value Profile="(Default)">ผู้หญิง</Value>
     </Setting>
+    <Setting Name="shortcutKey2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Home</Value>
+    </Setting>
+    <Setting Name="waveName2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ประเมิณความพึงพอใจผู้หญิง</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

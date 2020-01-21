@@ -58,5 +58,29 @@ namespace KeySound.Properties {
                 this["waveName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Home")]
+        public string shortcutKey2 {
+            get {
+                return ((string)(this["shortcutKey2"]));
+            }
+            set {
+                this["shortcutKey2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ประเมิณความพึงพอใจผู้หญิง")]
+        public string waveName2 {
+            get {
+                return ((string)(this["waveName2"]));
+            }
+            set {
+                this["waveName2"] = value;
+            }
+        }
     }
 }

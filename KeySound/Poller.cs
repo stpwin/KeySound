@@ -21,7 +21,7 @@ namespace KeySound
             this.onHotkeyPressed = onHotkeyPressed;
         }
 
-        public void Poll(Keys key)
+        public void Poll(Keys key, Keys key2)
         {
             //this.hotKey = key;
 
@@ -30,6 +30,12 @@ namespace KeySound
             {
                 Helpers.WaitUntilTimeoutWhileTrue(() => (GetAsyncKeyState(key) & 0b10000000_00000000) > 0, 100);
                 this.onHotkeyPressed.OnPressed();
+            }
+            short gaks2 = GetAsyncKeyState(key2);
+            if ((gaks2 & 0b10000000_00000000) > 0)
+            {
+                Helpers.WaitUntilTimeoutWhileTrue(() => (GetAsyncKeyState(key2) & 0b10000000_00000000) > 0, 100);
+                this.onHotkeyPressed.OnPressed2();
             }
         }
 

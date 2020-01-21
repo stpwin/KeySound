@@ -9,5 +9,6 @@ namespace KeySound
     public interface IOnHotkeyPressed
     {
         void OnPressed();
+        void OnPressed2();
     }
 }

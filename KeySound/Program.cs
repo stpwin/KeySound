@@ -21,6 +21,7 @@ namespace KeySound
         public static string toastMessage = "กำลังเล่นเสียง...";
 
         public static Keys hotKey;
+        public static Keys hotKey2;
 
         public static SoundPlayer _soundPlayer = new SoundPlayer();
         /// <summary>
@@ -42,11 +43,10 @@ namespace KeySound
 
         private static void Initialize()
         {
-            
-            //_soundPlayer.SoundLocation = Properties.Settings.Default.wavePath;
             Enum.TryParse(Properties.Settings.Default.shortcutKey, out hotKey);
-            _soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(Properties.Settings.Default.waveName);
-            //Properties.Resources.ResourceManager.get
+            Enum.TryParse(Properties.Settings.Default.shortcutKey2, out hotKey2);
+            //_soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(Properties.Settings.Default.waveName);
+
             LoadFont();
         }
 
@@ -138,17 +138,7 @@ namespace KeySound
             notifyIcon.MouseDoubleClick += NotifyIcon_MouseDoubleClick;
             notifyIcon.ContextMenuStrip = contextMenu;
             Update();
-            //var icon = typeof(Program).Assembly.GetManifestResourceStream("KeySound.Resources.icon.ico");
-            //if (icon is null)
-            //{
-            //    Console.WriteLine(@"icon is null");
-            //}
-            //else
-            //{
-
-                notifyIcon.Icon = Properties.Resources.icon;
-            //}
-
+            notifyIcon.Icon = Properties.Resources.icon;
             notifyIcon.Visible = true;
 
         }
@@ -156,7 +146,8 @@ namespace KeySound
         public void Update()
         {
             notifyIcon.Text = $@"{Program.BuildFormTitle()}
-{(Program.hotKey == Keys.None ? "ยังไม่ได้ตั้งค่าคีย์ลัด" : "กด " + Program.hotKey + " เพื่อเล่นเสียง")}";
+{(Program.hotKey == Keys.None ? "1.ยังไม่ได้ตั้งค่าคีย์ลัด" : "กด " + Program.hotKey + " เพื่อเล่นเสียง")}
+{(Program.hotKey2 == Keys.None ? "2.ยังไม่ได้ตั้งค่าคีย์ลัด" : "กด " + Program.hotKey2 + " เพื่อเล่นเสียง")}";
         }
 
 
@@ -164,7 +155,7 @@ namespace KeySound
         {
             while (running)
             {
-                poller.Poll(Program.hotKey);
+                poller.Poll(Program.hotKey, Program.hotKey2);
                 Application.DoEvents();
                 Thread.Sleep(1);
             }
@@ -198,6 +189,16 @@ namespace KeySound
 
         public void OnPressed()
         {
+            if (Properties.Settings.Default.waveName == "") return;
+            Program._soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(Properties.Settings.Default.waveName);
+            Program._soundPlayer.Play();
+            Program.ShowToastMessage(Program.toastMessage);
+        }
+
+        public void OnPressed2()
+        {
+            if (Properties.Settings.Default.waveName2 == "") return;
+            Program._soundPlayer.Stream = Properties.Resources.ResourceManager.GetStream(Properties.Settings.Default.waveName2);
             Program._soundPlayer.Play();
             Program.ShowToastMessage(Program.toastMessage);
         }

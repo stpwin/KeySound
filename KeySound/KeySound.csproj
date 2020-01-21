@@ -139,16 +139,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sounds\CheckTelFemale.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sounds\CheckTelMale.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\CheckTelFemale.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CheckTelMale.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ประเมิณความพึงพอใจผู้หญิง.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
